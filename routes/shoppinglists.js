@@ -6,7 +6,8 @@ var router = express.Router();
 
 /*Database connection*/
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/shoppinglists', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin:admin123Admin@cluster0.yaj8j.mongodb.net/shoppinglists?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+
 mongoose.Promise = global.Promise; // Global use of mongoose
 
 var db = mongoose.connection;
